@@ -12,8 +12,8 @@ The designs were created to the following widths:
 ### Primary
 
 - Dark Blue: hsl(233, 26%, 24%)
-- Lime Green: hsl(136, 65%, 51%)
-- Bright Cyan: hsl(192, 70%, 51%)
+- Lime Green: hsl(136, 65%, 51%) 	#31D35C
+- Bright Cyan: hsl(192, 70%, 51%) #2BB7DA
 
 ### Neutral
 
