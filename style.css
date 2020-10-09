@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Public Sans', sans-serif;
+    font-weight: 300;
 }
 
 li {
@@ -11,66 +12,94 @@ li {
 
 a {
     text-decoration: none;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
     display: inline-block;
     text-align: center;
     text-transform: capitalize;
-    font-weight:
 }
 
 .btn {
     background: rgb(49,211,92);
     background: linear-gradient(93deg, rgba(49,211,92,1) 0%, rgba(43,183,218,1) 100%);
-    padding: 18px 40px;
+    padding: 0.875rem 2.1875rem;
     border-radius: 50px;
     color: #ffffff;
+    font-weight: 400;
 }
 
-
-.container {
-    /* min-width: 375px; */
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 20px;
+#section {
+    min-width: 375px;
+    max-width: 100%;
 }
 
 #header {
+    position: relative;
     display: flex;
+    align-items: center;
     width: 100%;
-    height: 100%;
-    /* border: 1px solid red; */
-    /* padding: 20px 0px; */
+    height: 80px;
+    background-color: #ffffff;
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
-.header__nav ul {
-    display: flex;
 
+
+.header__nav ul {
+    display: flex;  
 }
 
 .header__logo {
     margin-right: auto;
-    padding: 20px;
+    /* padding: 20px; */
+}
+
+.header__logo img {
+    width: 8.8125rem; 
+    height: 1.375rem;
 }
 
 .header__btn {
     margin-left: auto;
-    /* padding: 5px; */
 }
+
 .nav__list {
     height: 100%;
     flex: 1;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
-.nav__list a {
-    padding: 20px 0px;
-    /* margin-left: 20px; */
+.nav__list:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.header__nav .nav__list a {
+    font-size: 0.8125rem;
+    position: relative;
     color: hsl(233, 8%, 62%);
-    /* color: white; */
+    height: 80px;
+    padding: 30px 0;
+}
+.header__nav a::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, rgba(49,211,92,1) 0%, rgba(43,183,218,1));
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+} 
+.header__nav .nav__list:hover a::after{
+
+    opacity: 1;
+  
+
 }
 
 .nav__list a:hover {
+    transition: color 200ms ease-in-out;
     color: hsl(233, 26%, 24%);
 }
 
@@ -78,47 +107,97 @@ a {
 
 
 li:hover {
+    
+    color: hsl(233, 26%, 24%);
     /* background-image: -webkit-gradient(linear, right bottom, right top, color-stop(0.33, rgb(49, 211, 92)), color-stop(0.67, rgb(43, 183, 218)));
     background-image: -moz-linear-gradient(center bottom, rgb(49, 211, 92) 33%, rgb(43, 183, 218) 67% ); */
 
-    border-bottom: 3px solid hsl(136, 65%, 51%);
+    
 
 }
 
+.container {
+
+
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: 999;
 
 
 
+}
 
+#section{
+    background-color: hsl(0, 0%, 98%);
+}
 
-/* .header__btn {display: none;} */
-/* #header {
+.hero__container {
     display: flex;
     position: relative;
-    justify-content: space-between;
-    background: black;
-    color: white;
-} */
-/* .header__logo {
-    padding: 15px;
-} */
-/* .header__nav {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    position: absolute;
-    top: 60px;
-    background: green;
-    width: 80%;
+
+    height: 660px;   
+    
+
+    max-width: 1110px;
     margin: 0 auto;
-} */
+    
+}
 
-/* .nav__list { */
-    /* flex: 1 1 80; */
-    /* padding: 20px; */
-/* } */
+.hero__heading {
+    font-size: 48px;
+    font-weight: 500;
+    color: hsl(233, 26%, 24%);
+}
+
+.hero__text {
+    flex: 2;
+    padding: 10.25rem 0 0 0;
+}
+
+.hero__heading {
+    font-size: 3.1rem;
+    padding: 1.03125rem;
+}
+
+.hero__paragraph {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    padding: 1.03125rem;
+    color: hsl(233, 8%, 62%);
+}
+
+.hero__btn {
+    padding: 1.15rem;
+}
 
 
+.hero__image {
+    position: relative;
+    flex: 3;
+}
 
-/* .section__articles {
-    display: none;
-} */
+
+.hero__image::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    padding: 65%;
+    background-image: url("images/image-mockups.png");
+    background-repeat: no-repeat;
+    background-size: 77%;
+    background-position: 83% 163%;
+    
+}
+
+.hero__image::before {
+    content: "";
+    position: absolute;
+    width: 14%;
+    padding: 65%;
+    background-image: url("images/bg-intro-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 124%;
+    background-position: 5% 234%;
+}
