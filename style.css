@@ -316,7 +316,20 @@ li:hover {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    /* align-items: center; */
+}
+
+.footer__btn__copyright {
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: flex-end;
+}
+
+.footer__copyright {
+    color: hsl(233, 8%, 62%);
+}
+
+.footer__btn {
+    justify-self: center;
 }
 
 .footer__container {
@@ -324,7 +337,7 @@ li:hover {
     margin: 0 auto;
     width: 100%;
     height: 192px;
-    padding: 3rem 0rem 3rem 4rem;
+    padding: 3rem 0rem 3rem 0rem;
     /* display: flex; */
 
 }
@@ -335,9 +348,11 @@ li:hover {
 
 
 .footer__nav {
-        display: flex;
-        /* flex-direction: row; */
-        flex-wrap: wrap;
+        /* display: flex;
+    
+
+        flex-direction: column;
+        flex-wrap: wrap; */
 }
 
 .contain {
