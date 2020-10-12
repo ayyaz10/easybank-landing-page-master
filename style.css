@@ -13,7 +13,7 @@ li {
 a {
     text-decoration: none;
     display: inline-block;
-    text-align: center;
+    /* text-align: center; */
     text-transform: capitalize;
 }
 .header__toggler {
@@ -45,7 +45,7 @@ a {
     width: 100%;
     height: 80px;
     background-color: #ffffff;
-    max-width: 1110px;
+    max-width: 69.375em;
     margin: 0 auto;
 }
 
@@ -57,7 +57,7 @@ a {
     margin-right: auto;
 }
 
-.header__logo img {
+.header__logo img, .footer__logo {
     width: 8.8125rem; 
     height: 1.375rem;
 }
@@ -134,18 +134,18 @@ li:hover {
 
 .hero__heading {
     font-size: 3.1rem;
-    padding: 1.03125rem;
+    margin-top: 1.15rem;
 }
 
 .hero__paragraph {
     font-size: 1.125rem;
     line-height: 1.5;
-    padding: 1.03125rem;
+    margin-top: 1.15rem;
     color: hsl(233, 8%, 62%);
 }
 
 .hero__btn {
-    padding: 1.15rem;
+    margin-top: 1.15rem;
 }
 
 
@@ -189,11 +189,11 @@ li:hover {
     max-width: 69.375em; /*1110px*/
     margin: 0 auto;
     padding: 6.875rem 0 6.171875rem 0;
-    /* padding: 3.5rem 0 3.4375rem 0; */
 }
 
 .whyus__heading {
     font-size: 1.875rem;
+    color: hsl(233, 26%, 24%);
     line-height: 1;
 }
 
@@ -216,7 +216,7 @@ li:hover {
 
 .services__service {
     flex: 1;
-    max-width: 15.875em;
+    padding: 0.9375rem;
 }
 
 .service__heading {
@@ -259,6 +259,7 @@ li:hover {
 
 .articles__article {
     background: #ffffff;
+    margin: 0.5rem;
     /* border: 1px solid red; */
 }
 
@@ -269,7 +270,7 @@ li:hover {
 }
 
 .article__text {
-    max-width: 206px;
+    max-width: 12.875rem;
     margin: 0 auto;
 }
 
@@ -284,25 +285,72 @@ li:hover {
 }
 
 .article__credit {
-    font-size: 10px;
+    font-size: 0.625rem;
     padding: 1.5625rem 0 0.49375rem 0;
     line-height: 1;
 }
 
 .article__title {
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 1.3;
     padding-bottom: 0.4rem;
     color: hsl(233, 26%, 24%);
 }
 
 .article__paragraph {
-    font-size: 12px;
+    font-size: 0.75rem;
+}
+
+/* footer style */
+
+#footer {
+    background-color: hsl(233, 26%, 24%);
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    /* align-items: center; */
+}
+
+.footer__container {
+    max-width: 69.375em;
+    margin: 0 auto;
+    width: 100%;
+    height: 192px;
+    padding: 3rem 0rem 3rem 4rem;
+    /* display: flex; */
+
+}
+
+.social__img {
+    margin-right: 10px;
 }
 
 
+.footer__nav {
+        display: flex;
+        /* flex-direction: row; */
+        flex-wrap: wrap;
+}
+
+.contain {
+    /* margin-left: auto; */
+}
+
+.footer__logo {
+    /* background: #fff; */
+    /* color: #fff; */
+}
+
 @media only screen and (max-width: 1190px) {
-    #header, .hero__container, .whyus__container {
+    #header, #footer, .hero__container, .whyus__container {
         max-width: 64em;
     }
 
@@ -321,6 +369,8 @@ li:hover {
 
 
   }
+
+  /* tablet and small desktop sizes */
 
   @media only screen and (max-width: 1024px) {
     .header__toggler {
@@ -444,19 +494,20 @@ li:hover {
         text-align: center;
     }
 
+    .whyus__paragraph {
+        margin: 0 auto;
+    }
+
     .whyus__services {
         justify-content: center;
         flex-wrap: wrap;
         
     }
     .services__service {
-        flex: 50%;
-        padding-top: 1.5rem;
+        flex: 0 0 50%;
     }
     
-    .whyus__paragraph {
-        margin: 0 auto;
-    }
+
 
     /* article section */
 
@@ -465,16 +516,25 @@ li:hover {
         text-align: center;
     }
     .articles__row {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0.8rem;
     }
-
 
   }
 
 
   @media only screen and (max-width: 640px) {
+      
+    .whyus__container {
+        min-width: 375px;
+        max-width: 300px;
+    }
+
+    .whyus__heading {
+        font-size: 1.5rem;
+    }
+
     .whyus__services {
         flex-direction: column;
         align-items: center;
@@ -486,7 +546,7 @@ li:hover {
     }
 
     .service__heading {
-        padding-bottom: 1.185rem;
+        padding-bottom: 1.155rem;
     
     }
 
@@ -494,9 +554,21 @@ li:hover {
         padding-top: 1.85rem;
     }
 
-    .margin-right-fix {
-        margin-right: 0px;
+    /* article section style */
+
+    .articles__container {
+        padding-bottom: 5.9375rem 0 5.5rem 0;
     }
+
+    .articles__heading {
+        font-size: 1.5rem;
+        padding-bottom: 2.375rem;
+    }
+
+    .articles__row {
+        padding: 0;
+    }
+
 
 
   }
