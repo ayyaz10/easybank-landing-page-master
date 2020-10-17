@@ -597,6 +597,10 @@ a {
         font-size: 32px;
         padding: 0;
     }
+    
+    .hero__btn {
+        margin-top: 4.15rem;
+    }
 
     .whyus__container {
         /* max-width: 725px; */
