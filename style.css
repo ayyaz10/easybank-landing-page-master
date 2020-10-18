@@ -53,21 +53,6 @@ a {
     margin: 0 auto;
 }
 
-.overlay {
-    position: fixed;
-    z-index: 999;
-    top: 3.75rem;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(hsl(233, 12%, 42%), transparent);
-}
-
-.no-scroll {
-    overflow: hidden;
-}
-
-
 .nav__ul{
     display: flex;  
 }
@@ -517,11 +502,27 @@ a {
         cursor: pointer;
     }
 
+    
+.overlay {
+    position: fixed;
+    z-index: 999;
+    top: 3.75rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(hsl(233, 12%, 42%), transparent);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
     .nav__ul {
         display: none;  
         flex-direction: column;
         text-align: center;
-        width: 80%;  
+        width: calc(100% - 3rem); 
         background-color: #ffffff;
         border-radius: 5px;
         position: absolute;
@@ -530,7 +531,9 @@ a {
         margin: auto;
         padding: 5px 0 5px 0;
         top: 115%;
-        left: 10%;
+        /* left: 10%; */
+        left: 50%;
+        transform: translate(-50%);
         z-index: 999;
 
     }
