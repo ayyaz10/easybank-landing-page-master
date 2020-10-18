@@ -53,6 +53,21 @@ a {
     margin: 0 auto;
 }
 
+.overlay {
+    position: fixed;
+    z-index: 999;
+    top: 3.75rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(hsl(233, 12%, 42%), transparent);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
 .nav__ul{
     display: flex;  
 }
