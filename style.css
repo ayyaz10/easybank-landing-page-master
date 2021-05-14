@@ -54,7 +54,7 @@ a {
 }
 
 .nav__ul{
-    display: flex;  
+    display: flex;
 }
 
 .header__logo {
@@ -80,7 +80,7 @@ a {
 }
 
 .header__nav .nav__list a {
-    font-size: 0.8125rem;
+    font-size: 0.9125rem;
     position: relative;
     color: hsl(233, 8%, 62%);
     height: 80px;
@@ -220,6 +220,10 @@ a {
 .services__service {
     flex: 1;
     padding: 0.9375rem;
+}
+
+.services__link {
+    color: hsl(233, 26%, 24%);
 }
 
 .service__heading {
